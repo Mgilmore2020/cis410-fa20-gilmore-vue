@@ -8,7 +8,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
-        <router-link class="nav-link" to="/workplaces">Workplaces</router-link>
+        <router-link class="nav-link" to="/workplaces">Workplace</router-link>
       </li>
 
       <li class="nav-item">

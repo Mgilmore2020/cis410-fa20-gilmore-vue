@@ -43,6 +43,8 @@ export default {
               password: this.password,
           }
           //console.log(myFormData)
+          
+//Error message not showing up
 
           axios.post("/jobseeker", myFormData)
             .then((myResponse)=>{
