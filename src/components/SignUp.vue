@@ -7,7 +7,7 @@
             <div class="form-group"><label for="lname-input">Last name</label> <input type="text" id="lname-input" required="required" placeholder="Last name" class="form-control" v-model="nameLast"></div> 
             
             <div class="form-group"><label for="email-input">Email address</label> <input type="email" id="email-input" required="required" placeholder="Enter email" class="form-control" v-model="email">
-                <small v-if="dupEmail" class="from-text text-danger">Please choose a different email</small>
+                <small v-if="dupEmail" class="form-text text-danger">Please choose a different email</small>
             </div> 
             
             
