@@ -1,5 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import axios from 'axios';
+import routes from './routes.js';
 
 Vue.use(Vuex);
 
@@ -15,9 +17,35 @@ export default new Vuex.Store({
         },
         storeUserInApp(state, myUser){
             state.user = myUser
+        },
+        storeWorkplace(state, myMovies){
+            state.movies = myMovies
+        },
+        clearAuthData(state){
+            state.token = null;
+            state.user = null;
         }
     },
     actions:{
+        getWorkplace({commit}){
+            axios.get('/workplace')
+            .then((myResponse)=>{
+                console.log("response from getworkplace action", myResponse);
+                commit('storeworkplace', myResponse.data)
+            })
+            .catch(()=>{console.log("error in getworkplace action")})
+        },
+        logout({commit, state}){
+            axios.post('/contacts/logout', null,{
+                headers:{
+                    Authorization: `Bearer ${state.token}`
+                }
+            });
+
+            commit('clearAuthData');
+
+            routes.replace("/");
+        }
 
     }
 })

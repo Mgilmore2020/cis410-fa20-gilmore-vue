@@ -14,7 +14,11 @@ Vue.use(VueRouter);
 
 const routes = [
     {path: '/', component: Home},
-    {path: '/account', component: Account},
+    {path: '/account', component: Account, beforeEnter(to, from, next){
+        if(store.state.token)
+            {next()}
+            else{next('/signin')}
+    }},
     {path: '/signin', component: Login},
     {path: '/workplaces', component: Workplace},
     {path: '/workplaces/:pk', component: WorkplaceDetail,
