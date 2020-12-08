@@ -6,11 +6,11 @@
 
         <p v-if="accountError" class="form-text text-danger">Can not get your account information, please try again later</p>
         
-        <table v-if="reviewsByUser" class="table">
+        <table v-if="applicationsByUser" class="table">
             <thead>
-                <th>Title</th>
-                <th>Summary</th>
-                <th>Rating</th>
+                <th>About</th>
+                <th>DateApplied</th>
+                <!-- <th>Rating</th> -->
             </thead>
             <tbody>
                 <tr v-for="thisApplication in ApplicationsByUser" :key="thisApplication.ApplicationPK">
