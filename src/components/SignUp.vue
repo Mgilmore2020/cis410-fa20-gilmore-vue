@@ -25,10 +25,10 @@ import axios from 'axios';
 export default {
     date(){
         return {
-            nameFirst: '',
-            nameLast: '',
-            email: '',
-            password: '',
+            NameFirst: '',
+            NameLast: '',
+            Email: '',
+            Password: '',
             errorMessage:'',
             dupEmail: false
         }
@@ -37,10 +37,10 @@ export default {
       onSubmit(){
 
           const myFormData = {
-              nameFirst: this.nameFirst,
-              nameLast: this.nameLast,
-              email: this.email,
-              password: this.password,
+              NameFirst: this.NameFirst,
+              NameLast: this.NameLast,
+              Email: this.Email,
+              Password: this.Password,
           }
           //console.log(myFormData)
           

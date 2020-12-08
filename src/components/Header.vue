@@ -39,6 +39,12 @@
 
 <script>
 export default {
+   computed:{
+      auth(){return this.$store.state.token}
+    },
+    methods:{
+      onLogout(){ this.$store.dispatch("logout")}
+    }
     
 }
 </script>
