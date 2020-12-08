@@ -4,7 +4,7 @@
         <hr/>
         <h3> {{firstName}}'s Applications </h3>
 
-        <p v-if="accountError" class="form-text text-danger">Can not get your account information, please try again later</p>
+        <p v-if="accountError" class="form-text text-danger">Cannot get your account information, please try again later</p>
         
         <table v-if="applicationsByUser" class="table">
             <thead>

@@ -9,7 +9,7 @@ import NotFound from './components/NotFound.vue';
 import SignUp from './components/SignUp.vue';
 import Workplace from './components/Workplace.vue';
 import WorkplaceDetail from './components/WorkplaceDetail.vue';
-
+import store from './store'
 Vue.use(VueRouter);
 
 const routes = [
