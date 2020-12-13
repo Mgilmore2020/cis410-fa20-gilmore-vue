@@ -7,6 +7,7 @@
                 <p>About: <br/> <strong>{{workplace.About}}</strong></p>
                 <p>Location: <br/> <strong>{{workplace.Location}}</strong></p>
                 <p>Industry: <br/> <strong>{{workplace.Industry}}</strong></p>
+                <p>Salary: <br/> <strong>{{workplace.Salary}}</strong></p>
             </div>
         </div>
         <br/>
