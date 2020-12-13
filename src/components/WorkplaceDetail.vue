@@ -4,7 +4,6 @@
             <div class="card-body">
                 <h2 class="text-primary">{{workplace.Name}}</h2>
                 <br/>
-                <p>Pitch Text: <br/> <strong>{{workplace.PitchText}}</strong></p>
                 <p>About: <br/> <strong>{{workplace.About}}</strong></p>
                 <p>Location: <br/> <strong>{{workplace.Location}}</strong></p>
                 <p>Industry: <br/> <strong>{{workplace.Industry}}</strong></p>
