@@ -28,7 +28,7 @@
       </li>
 
       <li class="nav-item">
-        <button class="btn btn-warning">Log Out</button>
+        <button @click="onLogout" class='btn btn-warning'>Log Out</button>
       </li>
       
     </ul>
