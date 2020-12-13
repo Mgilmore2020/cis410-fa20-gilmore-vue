@@ -15,7 +15,6 @@
                 <tr v-for="thisWorkplace in workplaces" :key="thisWorkplace.WorkplacePK">
                     <td>{{thisWorkplace.WorkplaceName}}</td>
                     <td>{{thisWorkplace.Location}}</td>
-                    <td>{{thisWorkplace.Industry}}</td>
                     <td>
                         <router-link :to="`/workplaces/${thisWorkplace.WorkplacePK}`">
                             <button type="button" class="btn btn-primary">Details</button>
