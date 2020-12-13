@@ -1,6 +1,7 @@
 <template>
     <div>
         <h1>Workplace</h1>
+        <hr/>
 
 <table class="table">
             <thead>
@@ -11,14 +12,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="thisWorkplace in Workplaces" :key="thisWorkplace.WorkplacePK">
-                    <th>{{thisWorkplace.WorkplaceName}}</th>
-                        <td>{{thisWorkplace.Location}}</td>
-                        <td>{{thisWorkplace.Industry}}</td>
-                        <td>
-                            <router-link :to="`/workplaces/${thisWorkplace.WorkplacePK}`">
-                                <button type="button" class="btn btn-primary">Details</button>
-                            </router-link>
+                <tr v-for="thisWorkplace in workplaces" :key="thisWorkplace.WorkplacePK">
+                    <td>{{thisWorkplace.WorkplaceName}}</td>
+                    <td>{{thisWorkplace.Location}}</td>
+                    <td>{{thisWorkplace.Industry}}</td>
+                    <td>
+                        <router-link :to="`/workplaces/${thisWorkplace.WorkplacePK}`">
+                            <button type="button" class="btn btn-primary">Details</button>
+                        </router-link>
 
                     </td>
                 </tr>
