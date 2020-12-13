@@ -26,10 +26,17 @@ export default {
   },
   components:{
     "app-header": Header,
+<<<<<<< HEAD
      },
   created(){
     console.log("App created")
     this.$store.dispatch("getWorkplaces")
+=======
+  },
+  created(){
+    console.log("App created")
+    this.$store.dispatch("getWorkplace")
+>>>>>>> 5b0c95b491324fee991aeee10ba1d132a07c29d0
   }
 }
 </script>

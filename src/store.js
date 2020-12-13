@@ -31,8 +31,8 @@ export default new Vuex.Store({
         getWorkplace({commit}){
             axios.get('/workplaces')
             .then((myResponse)=>{
-                console.log("response from getworkplace action", myResponse);
-                commit('storeworkplace', myResponse.data)
+                console.log("response from getWorkplace action", myResponse);
+                commit('storeWorkplace', myResponse.data)
             })
             .catch(()=>{console.log("error in getworkplace action")})
         },
