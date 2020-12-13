@@ -19,7 +19,7 @@ export default new Vuex.Store({
             state.user = myUser
         },
 
-        storeWorkplace(state, myWorkplacess){
+        storeWorkplace(state, myWorkplaces){
             state.workplaces = myWorkplaces
         },
         clearAuthData(state){
