@@ -18,7 +18,11 @@ export default new Vuex.Store({
         storeUserInApp(state, myUser){
             state.user = myUser
         },
+<<<<<<< HEAD
         storeWorkplace(state, myWorkplacess){
+=======
+        storeWorkplace(state, myWorkplaces){
+>>>>>>> 6e93081ab356f6c3853030fc95a3af210f8b4b0f
             state.workplaces = myWorkplaces
         },
         clearAuthData(state){
@@ -28,7 +32,7 @@ export default new Vuex.Store({
     },
     actions:{
         getWorkplace({commit}){
-            axios.get('/workplace')
+            axios.get('/workplaces')
             .then((myResponse)=>{
                 console.log("response from getworkplace action", myResponse);
                 commit('storeworkplace', myResponse.data)
