@@ -39,11 +39,7 @@ export default {
         }
     },
     methods:{
-<<<<<<< HEAD
-        submitReview(){
-=======
         submitApplication(){
->>>>>>> bdc32231a17a2416d39f71de3e2c6156fcdabd98
             const myApplication={
                 about: this.about,
                 dateApplied: this.dateApplied,

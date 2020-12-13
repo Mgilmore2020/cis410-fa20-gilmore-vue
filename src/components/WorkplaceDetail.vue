@@ -7,16 +7,15 @@
                 <p>About: <br/> <strong>{{workplace.About}}</strong></p>
                 <p>Location: <br/> <strong>{{workplace.Location}}</strong></p>
                 <p>Industry: <br/> <strong>{{workplace.Industry}}</strong></p>
-                <p>Salary: <br/> <strong>{{workplace.Salary}}</strong></p>
             </div>
         </div>
         <br/>
         <router-link v-if="auth" :to="`/workplaces/${this.$route.params.pk}/application`">
             <button type="button" class="btn btn-success">Add an Application</button>
         </router-link>
-        <!-- <router-link v-else :to="`/signin`">
+        <router-link v-else :to="`/signin`">
             <button type="button" class="btn btn-outline-success">Sign In to Add an Application</button>
-        </router-link> -->
+        </router-link>
         <br/>
         <br/>
         <router-view></router-view>
