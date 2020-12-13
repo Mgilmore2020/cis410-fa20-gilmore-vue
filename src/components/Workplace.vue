@@ -13,21 +13,13 @@
             <tbody>
                 <tr v-for="thisWorkplace in Workplaces" :key="thisWorkplace.WorkplacePK">
                     <th>{{thisWorkplace.WorkplaceName}}</th>
-<<<<<<< HEAD
-                    <td>{{thisWorkplace.Location}}</td>
-                    <td>{{thisWorkplace.Industry}}</td>
-                    <td>
-                        <router-link :to="`/workplaces/${thisWorkplace.WorkplacePK}`">
-                            <button type="button" class="btn btn-primary">Details</button>
-                        </router-link>
-=======
                         <td>{{thisWorkplace.Location}}</td>
                         <td>{{thisWorkplace.Industry}}</td>
                         <td>
                             <router-link :to="`/workplaces/${thisWorkplace.WorkplacePK}`">
                                 <button type="button" class="btn btn-primary">Details</button>
                             </router-link>
->>>>>>> 6e93081ab356f6c3853030fc95a3af210f8b4b0f
+
                     </td>
                 </tr>
             </tbody>
