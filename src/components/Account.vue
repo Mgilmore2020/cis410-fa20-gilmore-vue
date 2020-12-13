@@ -8,15 +8,18 @@
         
         <table v-if="applicationsByUser" class="table">
             <thead>
-                <th>About</th>
-                <th>DateApplied</th>
-                <!-- <th>Rating</th> -->
+                <th>Workplace</th>
+                <th>Location</th>
+                <th>Interest</th>
+                <th>Date Applied</th>
             </thead>
             <tbody>
-                <tr v-for="thisApplication in ApplicationsByUser" :key="thisApplication.ApplicationPK">
-                    <th><router-link :to="`/applications/${thisApplication.WorkplaceFK}`">{{thisApplication.About}}</router-link></th>
-                    <th>{{thisApplication.DateApplied}}</th>
-                    <!-- <th>{{thisApplication.Rating}}</th> -->
+                <tr v-for="thisApplication in applicationsByUser" :key="thisApplication.ApplicationPK">
+                    <!-- <router-link :to="`/applications/ ${thisApplication.WorkplaceFK}`">{{thisApplication.WorkplaceName}}</router-link> -->
+                   <th><router-link :to="`/workplaces/${thisApplication.WorkplaceFK}`">{{thisApplication.WorkplaceName}}</router-link></th>
+                   <th>{{thisApplication.Location}}</th>
+                   <th>{{thisApplication.Interest}}</th>
+                   <th>{{thisApplication.DateApplied}}</th>
                 </tr>
             </tbody>   
         </table>
@@ -38,13 +41,13 @@ export default {
         return this.$store.state.user.NameFirst}
     },
     created(){
-        axios.get("/applications/me", {
+        axios.get("/application/me", {
             headers: {
                 Authorization: `Bearer ${this.$store.state.token}`
             }
         })
         .then((response)=>{ 
-            console.log("here is the applications/me response:", response)
+            console.log("here is the application/me response:", response)
             this.applicationsByUser = response.data})
         .catch(()=>{
             this.accountError = true
