@@ -18,8 +18,8 @@ export default new Vuex.Store({
         storeUserInApp(state, myUser){
             state.user = myUser
         },
-        storeWorkplace(state, myMovies){
-            state.movies = myMovies
+        storeWorkplace(state, myWorkplaces){
+            state.workplaces = myWorkplaces
         },
         clearAuthData(state){
             state.token = null;
@@ -28,7 +28,7 @@ export default new Vuex.Store({
     },
     actions:{
         getWorkplace({commit}){
-            axios.get('/workplace')
+            axios.get('/workplaces')
             .then((myResponse)=>{
                 console.log("response from getworkplace action", myResponse);
                 commit('storeworkplace', myResponse.data)
