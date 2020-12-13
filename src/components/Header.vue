@@ -11,23 +11,23 @@
         <router-link class="nav-link" to="/workplaces">Workplace</router-link>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-item" v-if="auth">
         <router-link class="nav-link" to="/account">My Account</router-link>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-item" v-if="!auth">
         <router-link class="nav-link" to="/signin">
         <button class="btn btn-warning">Sign In</button>
         </router-link>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-item" v-if="!auth">
         <router-link class="nav-link" to="/signup">
         <button class="btn btn-outline-warning text-dark">Sign Up</button>
         </router-link>
       </li>
 
-      <li class="nav-item">
+      <li class="nav-item" v-if="!auth">
         <button @click="onLogout" class='btn btn-warning'>Log Out</button>
       </li>
       
