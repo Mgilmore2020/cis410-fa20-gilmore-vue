@@ -13,7 +13,7 @@
             </thead>
             <tbody>
                 <tr v-for="thisWorkplace in workplaces" :key="thisWorkplace.WorkplacePK">
-                    <td>{{thisWorkplace.WorkplaceName}}</td>
+                    <th>{{thisWorkplace.WorkplaceName}}</th>
                     <td>{{thisWorkplace.Location}}</td>
                     <td>
                         <router-link :to="`/workplaces/${thisWorkplace.WorkplacePK}`">
