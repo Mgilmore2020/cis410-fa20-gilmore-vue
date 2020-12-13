@@ -13,9 +13,9 @@
         <router-link v-if="auth" :to="`/workplaces/${this.$route.params.pk}/application`">
             <button type="button" class="btn btn-success">Add an Application</button>
         </router-link>
-        <router-link v-else :to="`/signin`">
+        <!-- <router-link v-else :to="`/signin`">
             <button type="button" class="btn btn-outline-success">Sign In to Add an Application</button>
-        </router-link>
+        </router-link> -->
         <br/>
         <br/>
         <router-view></router-view>
@@ -33,7 +33,8 @@ export default {
 
             return thisworkplace
         }
-    }
+    },
+    auth(){return this.$store.state.token}
 }
 </script>
 

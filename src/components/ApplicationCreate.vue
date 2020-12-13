@@ -6,9 +6,10 @@
                      <h4>Create an application</h4> 
                      <form id="review-form" @submit.prevent="submitApplication">
                         <div class="form-group">
-                             <label for="ratinginput">About</label> 
-                             <input type="number" id="ratinginput" name=" rating" min="1" max="10" required="required" class="form-control" v-model="about">
+                             <label for="aboutinput">About</label> 
+                             <input type="text" id="aboutinput" name=" about"  required="required" class="form-control" v-model="about">
                         </div> 
+
                         <div class="form-group">
                             <label for="summaryinput">Date Applied</label> <textarea row="3" id="summaryinput" name="summary" required="required" class="form-control" v-model="dateapplied"></textarea>
                         </div> 
@@ -32,19 +33,19 @@ import axios from 'axios';
 export default {
     data(){
         return{
-            about: null,
-            dateapplied:"",
+            about: "",
+            dateApplied: null,
             errorMessage: null,
         }
     },
     methods:{
         submitReview(){
-            const myReview={
+            const myApplication={
                 about: this.about,
                 dateApplied: this.dateApplied,
-                workplaceFK: this.$route.params.fk
+                workplaceFK: this.$route.params.pk
             };
-            // console.log("here is the review", myReview)
+            console.log("here is the review", myApplication)
             const token = this.$store.state.token;
             axios.post("/applications", myapplication, {
                 headers:{
