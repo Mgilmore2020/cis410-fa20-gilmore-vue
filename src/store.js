@@ -18,8 +18,8 @@ export default new Vuex.Store({
         storeUserInApp(state, myUser){
             state.user = myUser
         },
-        storeWorkplace(state, myMovies){
-            state.movies = myMovies
+        storeWorkplace(state, myWorkplacess){
+            state.workplaces = myWorkplaces
         },
         clearAuthData(state){
             state.token = null;
