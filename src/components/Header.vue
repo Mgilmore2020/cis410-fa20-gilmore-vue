@@ -27,7 +27,7 @@
         </router-link>
       </li>
 
-      <li class="nav-item" v-if="!auth">
+      <li class="nav-item" v-if="auth">
         <button @click="onLogout" class='btn btn-warning'>Log Out</button>
       </li>
       

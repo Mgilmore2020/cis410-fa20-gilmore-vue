@@ -38,8 +38,8 @@ export default {
         }
     },
     methods:{
-        submitReview(){
-            const myReview={
+        submitApplication(){
+            const myApplication={
                 about: this.about,
                 dateApplied: this.dateApplied,
                 workplaceFK: this.$route.params.fk
@@ -54,7 +54,7 @@ export default {
             .then(()=>{this.$router.replace('/account')})
             .catch(()=>{this.errorMessage = "Unable to create a review, please try again later."})
         },
-        cancelReview(){
+        cancelApplication(){
             this.$router.go(-1)
         }
     }
