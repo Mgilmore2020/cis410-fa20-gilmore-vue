@@ -2,7 +2,7 @@
     <div>
         <div class="card">
             <div class="card-body">
-                <h2 class="text-primary">{{workplace}}</h2>
+                <h2 class="text-primary">{{workplace.Name}}</h2>
                 <br/>
                 <p>Pitch Text: <br/> <strong>{{workplace.PitchText}}</strong></p>
                 <p>About: <br/> <strong>{{workplace.About}}</strong></p>
@@ -10,6 +10,16 @@
                 <p>Industry: <br/> <strong>{{workplace.Industry}}</strong></p>
             </div>
         </div>
+        <br/>
+        <router-link v-if="auth" :to="`/workplaces/${this.$route.params.pk}/application`">
+            <button type="button" class="btn btn-success">Add an Application</button>
+        </router-link>
+        <router-link v-else :to="`/signin`">
+            <button type="button" class="btn btn-outline-success">Sign In to Add an Application</button>
+        </router-link>
+        <br/>
+        <br/>
+        <router-view></router-view>
     </div>
 </template>
 

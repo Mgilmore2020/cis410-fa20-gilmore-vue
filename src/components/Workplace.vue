@@ -19,6 +19,7 @@
                             <router-link :to="`/workplaces/${thisWorkplace.WorkplacePK}`">
                                 <button type="button" class="btn btn-primary">Details</button>
                             </router-link>
+
                     </td>
                 </tr>
             </tbody>

@@ -18,6 +18,7 @@ export default new Vuex.Store({
         storeUserInApp(state, myUser){
             state.user = myUser
         },
+
         storeWorkplace(state, myWorkplaces){
             state.workplaces = myWorkplaces
         },
