@@ -14,7 +14,7 @@
                             <label for="aboutinput">About</label> 
                             <textarea row="3" id="aboutinput" name="about" required="required" class="form-control" v-model="about"></textarea>
                         </div> 
-                            <button type="submit" class="btn btn-primary">Submit Review</button> 
+                            <button type="submit" class="btn btn-primary">Submit Application</button> 
                             
                             <button v-on:click="cancelApplication" type="clear" class="btn btn-outline-danger">Cancel</button>
 
@@ -45,7 +45,7 @@ export default {
             };
             //console.log("here is the review", myApplication)
             const token = this.$store.state.token;
-            axios.post("/applications", myapplication, {
+            axios.post("/applications", myApplication, {
                 headers:{
                     Authorization: `Bearer ${token}`
                 }
