@@ -36,10 +36,6 @@ export default {
         workplaces(){return this.$store.state.workplaces}
     }
 }
-//  axios.get("/workplaces", myFormData)
-//             .then((myResponse)=>{
-//               console.log(myResponse)
-//               })
 </script>
 
 <style scoped>

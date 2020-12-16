@@ -10,6 +10,7 @@ import SignUp from './components/SignUp.vue';
 import Workplace from './components/Workplace.vue';
 import WorkplaceDetail from './components/WorkplaceDetail.vue';
 import store from './store.js'
+
 Vue.use(VueRouter);
 
 const routes = [
@@ -23,8 +24,8 @@ const routes = [
     {path: '/workplaces', component: Workplace},
     {path: '/workplaces/:pk', component: WorkplaceDetail,
         children: [
-            {path: '/application', component: ApplicationCreate}
-        ]},
+            {path: 'application', component: ApplicationCreate}
+        ] },
     {path: '/signup', component: SignUp},
     {path: '/:invalidroute(.*)', component: NotFound}
 ]

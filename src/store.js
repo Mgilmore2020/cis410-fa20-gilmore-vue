@@ -37,7 +37,7 @@ export default new Vuex.Store({
             .catch(()=>{console.log("error in getworkplace action")})
         },
         logout({commit, state}){
-            axios.post('/contacts/logout', null,{
+            axios.post('/jobseeker/logout', null,{
                 headers:{
                     Authorization: `Bearer ${state.token}`
                 }
